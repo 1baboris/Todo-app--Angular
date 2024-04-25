@@ -1,0 +1,30 @@
+<aside
+  class="fixed top-16 w-80 shadow-lg rounded border border-gray-300 h-[calc(100vh_-_4rem)]"
+>
+  <ul
+    class="*:p-4 *:cursor-pointer *:rounded-md flex flex-col gap-2 mt-2 *:mx-2"
+  >
+    <li
+      [routerLink]="'/'"
+      [routerLinkActiveOptions]="{ exact: true }"
+      routerLinkActive="bg-blue-100 border-l-4 border-blue-500 transition duration-300 text-blue-600 font-bold"
+      class="hover:bg-gray-100 transition duration-300"
+    >
+      All
+    </li>
+    <li
+      [routerLink]="'/importants'"
+      routerLinkActive="bg-blue-100 border-l-4 border-blue-500 transition duration-300 text-blue-600 font-bold"
+      class="hover:bg-gray-100 transition duration-300"
+    >
+      Important
+    </li>
+    <li
+      [routerLink]="'/completed'"
+      routerLinkActive="bg-blue-100 border-l-4 border-blue-500 transition duration-300 text-blue-600 font-bold"
+      class="hover:bg-gray-100 transition duration-300"
+    >
+      Completed
+    </li>
+  </ul>
+</aside>
