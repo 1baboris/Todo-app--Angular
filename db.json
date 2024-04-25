@@ -1,14 +1,28 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "title": "learn sngular"
+      "id": "be0a",
+      "title": "Ajouter la fonction recherche dans Important et Completed"
     },
     {
-      "id": "1d9d",
-      "title": "wesh",
-      "important": true,
-      "completed": true
+      "id": "5475",
+      "title": "Ajouter une fonctionnalité pouvant enlever l'état d'importance, idem pour l'état de complet"
+    },
+    {
+      "id": "a8ac",
+      "title": "Ajouter une fonctionnalité pouvant supprimé une todo"
+    },
+    {
+      "id": "8be1",
+      "title": "et une pouvant supprimer toute les todos d'un coup"
+    },
+    {
+      "id": "379d",
+      "title": "Redeseigner UI"
+    },
+    {
+      "id": "0910",
+      "title": "Ajouter des animations "
     }
   ]
 }

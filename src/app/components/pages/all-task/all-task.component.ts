@@ -4,6 +4,7 @@ import { HttpService } from '../../../services/http.service';
 import { DatePipe } from '@angular/common';
 import { PageTitleComponent } from '../../page-title/page-title.component';
 import { TaskListComponent } from '../../task-list/task-list.component';
+import { StateService } from '../../../services/state.service';
 
 @Component({
   selector: 'app-all-task',
@@ -14,9 +15,21 @@ import { TaskListComponent } from '../../task-list/task-list.component';
 })
 export class AllTaskComponent {
   newTask = '';
+  intialTaskList: any[] = [];
   taskList: any[] = [];
   httpService = inject(HttpService);
+  stateService = inject(StateService);
   ngOnInit() {
+    this.stateService.searchSubject.subscribe((value) => {
+      console.log('search', value);
+      if (value) {
+        this.taskList = this.intialTaskList.filter((x) =>
+          x.title.toLowerCase().includes(value.toLowerCase())
+        );
+      } else {
+        this.taskList = this.intialTaskList;
+      }
+    });
     this.getAllTasks();
   }
 
@@ -29,7 +42,7 @@ export class AllTaskComponent {
   }
   getAllTasks() {
     this.httpService.getAllTasks().subscribe((result: any) => {
-      this.taskList = result;
+      this.intialTaskList = this.taskList = result;
     });
   }
   onComplete(task: any) {
