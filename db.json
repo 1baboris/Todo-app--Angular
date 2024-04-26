@@ -2,27 +2,72 @@
   "tasks": [
     {
       "id": "be0a",
-      "title": "Ajouter la fonction recherche dans Important et Completed"
+      "title": "Ajouter la fonction recherche dans Important et Completed",
+      "important": true,
+      "completed": true
     },
     {
       "id": "5475",
-      "title": "Ajouter une fonctionnalité pouvant enlever l'état d'importance, idem pour l'état de complet"
+      "title": "Ajouter une fonctionnalité pouvant enlever l'état d'importance, idem pour l'état de complet",
+      "important": true,
+      "completed": true
     },
     {
       "id": "a8ac",
-      "title": "Ajouter une fonctionnalité pouvant supprimé une todo"
+      "title": "Ajouter une fonctionnalité pouvant supprimé une todo",
+      "important": true
     },
     {
       "id": "8be1",
-      "title": "et une pouvant supprimer toute les todos d'un coup"
+      "title": "et une pouvant supprimer toute les todos d'un coup",
+      "important": true,
+      "completed": false
     },
     {
       "id": "379d",
-      "title": "Redeseigner UI"
+      "title": "Redeseigner UI",
+      "important": true
     },
     {
       "id": "0910",
       "title": "Ajouter des animations "
+    },
+    {
+      "id": "cccc",
+      "title": "ajouter un mode nuit"
+    },
+    {
+      "id": "1e00",
+      "title": "ajouter une authentification afin de rendre l'application utile par plusieurs personne"
+    },
+    {
+      "id": "609c",
+      "title": "LocalStorage pour se souvenir de l'autentification"
+    },
+    {
+      "id": "b370",
+      "title": "Rendre l'app utilisable sur téléphone",
+      "important": true
+    },
+    {
+      "id": "7f72",
+      "title": "Ajouter la possibilité de passer en anglais ou en Francais"
+    },
+    {
+      "id": "eecd",
+      "title": "Ajouter la possibilité de créer des equipes"
+    },
+    {
+      "id": "ae85",
+      "title": "ajouter la date d'ajout"
+    },
+    {
+      "id": "8f54",
+      "title": "ajouter une une fonctionnalité pouvant nous permettre de définir une date de fin"
+    },
+    {
+      "id": "f59a",
+      "title": "ajouter une fonctionnalité nous permettant d'éditer une tache"
     }
   ]
 }

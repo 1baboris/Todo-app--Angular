@@ -10,14 +10,24 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class TaskListComponent {
   @Input() taskList: any[] = [];
-  @Output() important = new EventEmitter<any>();
-  @Output() complete = new EventEmitter<any>();
+  @Output() onImportant = new EventEmitter<any>();
+  @Output() onComplete = new EventEmitter<any>();
+  @Output() onUndoImportant = new EventEmitter<any>();
+  @Output() onUndoComplete = new EventEmitter<any>();
 
   markImportant(task: any) {
-    this.important.emit(task);
+    this.onImportant.emit(task);
   }
 
   markComplete(task: any) {
-    this.complete.emit(task);
+    this.onComplete.emit(task);
+  }
+
+  eraseImportant(task: any) {
+    this.onUndoImportant.emit(task);
+  }
+
+  eraseComplete(task: any) {
+    this.onUndoComplete.emit(task);
   }
 }

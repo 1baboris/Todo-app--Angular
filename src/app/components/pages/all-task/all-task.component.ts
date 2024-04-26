@@ -45,15 +45,30 @@ export class AllTaskComponent {
       this.intialTaskList = this.taskList = result;
     });
   }
+
   onComplete(task: any) {
     task.completed = true;
-    console.log('complete', task);
     this.httpService.updateTask(task).subscribe(() => {
       this.getAllTasks();
     });
   }
+
+  onUndoComplete(task: any) {
+    task.completed = false;
+    this.httpService.updateTask(task).subscribe(() => {
+      this.getAllTasks();
+    });
+  }
+
   onImportant(task: any) {
     task.important = true;
+    this.httpService.updateTask(task).subscribe(() => {
+      this.getAllTasks();
+    });
+  }
+
+  onUndoImportant(task: any) {
+    task.important = false;
     this.httpService.updateTask(task).subscribe(() => {
       this.getAllTasks();
     });
