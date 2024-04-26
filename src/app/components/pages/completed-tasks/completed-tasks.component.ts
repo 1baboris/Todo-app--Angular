@@ -66,4 +66,10 @@ export class CompletedTasksComponent {
       this.getAllTasks();
     });
   }
+
+  onDeleteTask(task: any) {
+    this.httpService.deleteTask(task).subscribe(() => {
+      this.getAllTasks();
+    });
+  }
 }

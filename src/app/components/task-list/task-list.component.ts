@@ -14,6 +14,7 @@ export class TaskListComponent {
   @Output() onComplete = new EventEmitter<any>();
   @Output() onUndoImportant = new EventEmitter<any>();
   @Output() onUndoComplete = new EventEmitter<any>();
+  @Output() onDeleteTask = new EventEmitter<any>();
 
   markImportant(task: any) {
     this.onImportant.emit(task);
@@ -29,5 +30,9 @@ export class TaskListComponent {
 
   eraseComplete(task: any) {
     this.onUndoComplete.emit(task);
+  }
+
+  deleteTask(task: any) {
+    this.onDeleteTask.emit(task);
   }
 }
